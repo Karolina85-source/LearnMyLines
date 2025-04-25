@@ -314,6 +314,215 @@ Przycisk: Analiza
 Pokazuje różnice między scenariuszem a wypowiedzią
 
 
+Plan implementacji aplikacji LearnMyLines – szczegóły techniczne
+1. Modele / klasy w projekcie
+1.1. Model Scenario (Scenariusz)
+Pola:
+
+id (UUID lub AutoField)
+
+title (CharField) – nazwa scenariusza
+
+uploaded_file (FileField) – oryginalny plik scenariusza (.txt, .pdf, .docx)
+
+import_date (DateTimeField) – data dodania
+
+raw_text (TextField) – pełny tekst scenariusza po imporcie
+
+Metody:
+
+parse_roles() – metoda do automatycznego rozpoznawania ról i podziału na kwestie
+
+1.2. Model Role (Rola postaci)
+Pola:
+
+id
+
+scenario (ForeignKey do Scenario)
+
+name (CharField) – nazwa roli (np. „Hamlet”, „Ofelia”)
+
+is_user_role (BooleanField) – czy to rola wybrana przez użytkownika
+
+1.3. Model Line (Kwestia)
+Pola:
+
+id
+
+role (ForeignKey do Role)
+
+text (TextField) – tekst kwestii
+
+order (IntegerField) – kolejność w scenariuszu
+
+1.4. Model Session (Sesja nauki)
+Pola:
+
+id
+
+scenario (ForeignKey do Scenario)
+
+user_role (ForeignKey do Role)
+
+start_time (DateTimeField)
+
+end_time (DateTimeField)
+
+progress (IntegerField) – liczba przećwiczonych kwestii/scen
+
+1.5. Model Attempt (Próba wypowiedzi)
+Pola:
+
+id
+
+session (ForeignKey do Session)
+
+line (ForeignKey do Line) – kwestia ćwiczona w próbie
+
+recording (FileField) – nagranie audio wypowiedzi użytkownika
+
+error_analysis (JSONField) – wynik analizy błędów (np. pominięcia, zmiany)
+
+emotion (CharField) – emocja, z którą ćwiczono kwestię (np. „radość”, „złość”)
+
+timestamp (DateTimeField)
+
+2. Baza danych – schemat i relacje
+Scenario 1 - * Role
+
+Role 1 - * Line
+
+Scenario 1 - * Session
+
+Session 1 - * Attempt
+
+Role (w Session) wskazuje rolę użytkownika
+
+Attempt powiązane z konkretną kwestią i sesją
+
+3. Zewnętrzne biblioteki / API
+Przetwarzanie plików:
+
+python-docx – do odczytu plików .docx
+
+PyPDF2 lub pdfplumber – do odczytu plików .pdf
+
+Analiza tekstu i podział na role:
+
+własne algorytmy oparte na regexach i heurystykach (np. rozpoznawanie wzorców „ROLA: tekst”)
+
+Nagrywanie i odtwarzanie audio:
+
+HTML5 Web Audio API (frontend)
+
+pydub lub ffmpeg (backend) do konwersji i obróbki nagrań
+
+Analiza błędów:
+
+difflib (Python stdlib) do porównywania tekstów
+
+Frontend:
+
+JavaScript (np. React lub czysty JS) do interaktywnego odtwarzania i sterowania nagraniami
+
+Opcjonalnie:
+
+Text-to-Speech API (np. Google TTS) do generowania kwestii partnerów w różnych emocjach (future feature)
+
+4. Interakcje użytkownika
+Dodawanie scenariusza:
+
+Użytkownik wybiera plik (.txt, .pdf, .docx)
+
+System importuje tekst, automatycznie rozpoznaje role i kwestie
+
+Użytkownik sprawdza i edytuje rozpoznane role i teksty
+
+Zapisuje scenariusz i wybiera swoją rolę
+
+Tryb nauki:
+
+Użytkownik widzi swoje kwestie wyświetlone na ekranie
+
+Słyszy kwestie partnerów (odtwarzane audio z różnymi emocjami)
+
+Steruje odtwarzaniem (pauza, przewijanie, powtórki)
+
+Rozpoczyna i kończy próbę wypowiedzi
+
+Po próbie widzi analizę błędów i sugestie
+
+Zadania emocjonalne:
+
+Wybór emocji do ćwiczenia kwestii
+
+Nagrywanie i zapisywanie różnych wersji emocjonalnych
+
+Historia sesji:
+
+Przeglądanie listy nagrań i sesji
+
+Odtwarzanie nagrań i analiza błędów
+
+Symulacja dialogu:
+
+Rozmowa z wirtualnym partnerem, który odtwarza kwestie w realistycznym tempie
+
+Możliwość zmiany tempa rozmowy
+
+5. Rozrysowanie mockupów (opis słowny)
+5.1. Ekran startowy
+Logo + nazwa aplikacji
+
+Duży przycisk „Dodaj scenariusz”
+
+Link „Historia nagrań”
+
+5.2. Import scenariusza
+Przycisk „Wybierz plik”
+
+Podgląd tekstu ze scenariuszem
+
+Lista rozpoznanych ról z możliwością edycji
+
+Przycisk „Zapisz i wybierz rolę”
+
+5.3. Wybór roli
+Lista ról z nazwami
+
+Podgląd kwestii dla każdej roli
+
+Przycisk „Wybieram tę rolę”
+
+5.4. Ekran nauki
+Tekst własnych kwestii (wyświetlany)
+
+Odtwarzacz kwestii partnerów (z kontrolkami: start, pauza, przewiń)
+
+Przycisk „Start próby” i „Zakończ próbę”
+
+Wskaźnik postępu
+
+5.5. Ekran analizy błędów
+Porównanie tekstu oryginalnego i wypowiedzi użytkownika
+
+Lista błędów i sugestii
+
+Przycisk „Spróbuj ponownie” i „Zapisz próbę”
+
+5.6. Historia sesji
+Lista nagrań z datami i nazwami scenariuszy
+
+Przycisk „Odtwórz” i „Analiza”
+
+5.7. Tryb symulacji dialogu
+Okno rozmowy z wirtualnym partnerem
+
+Kontrolki zmiany tempa
+
+Przycisk zakończenia symulacji
+
+
 Licencja
 Projekt jest przeznaczony wyłącznie do użytku prywatnego
 
