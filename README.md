@@ -202,6 +202,118 @@ Przejścia między ekranami:
 
  Start ➝ Import scenariusza ➝ Wybór roli ➝ Ćwiczenie ➝ Analiza ➝ Historia
 
+MUST HAVE (funkcje absolutnie niezbędne)
+Import scenariusza z pliku .txt
+
+Automatyczne rozpoznanie i edycja ról
+
+Wybór roli przez użytkownika
+
+Tryb nauki – wyświetlanie kwestii użytkownika
+
+Odtwarzanie kwestii partnerów (prosta wersja)
+
+Przycisk „Start próby” i „Zakończ próbę”
+
+Historia sesji – lista zapisanych prób
+
+Możliwość odtworzenia własnych nagrań
+
+Zapis prób
+
+SHOULD HAVE (bardzo przydatne, ale niekonieczne)
+Obsługa plików .pdf i .docx
+
+Możliwość pauzowania i przewijania wypowiedzi
+
+Prosta analiza błędów – porównanie tekstu użytkownika z oryginałem
+
+Podgląd całej sceny / scenariusza
+
+Edycja scenariusza przed zapisaniem
+
+Możliwość ustawienia tempa wypowiedzi partnerów
+
+COULD HAVE (miło byłoby mieć)
+Zadania emocjonalne – różne wersje tej samej kwestii
+
+Sugestie poprawy na podstawie analizy
+
+Porównanie nagrań w historii prób
+
+Wskaźnik postępu nauki (np. liczba scen opanowanych)
+
+Tryb symulacji dialogu z wirtualnym partnerem
+
+Rozpoznawanie mowy lub sterowanie głosowe
+
+WON'T HAVE (na razie nie będzie)
+Rejestracja i logowanie użytkownika
+
+Tryb multiplayer – granie sceny z inną osobą
+
+Tłumaczenie scenariuszy na inne języki
+
+Automatyczne generowanie scenariuszy
+
+1. Ekran startowy (brak scenariuszy)
+Przycisk: Dodaj scenariusz
+
+Przejście do: Ekran importu scenariusza
+
+Przycisk: Historia prób
+
+Przejście do: Ekran historii
+
+2. Ekran importu scenariusza
+Wybór pliku (.txt / .pdf / .docx)
+
+Automatyczny podział na role
+
+Podgląd scenariusza
+
+Przypisanie roli użytkownika
+
+Przycisk: Zapisz i rozpocznij naukę
+
+Przejście do: Ekran nauki
+
+3. Ekran nauki
+Wyświetlenie kwestii użytkownika
+
+Odtwarzanie partnerów (domyślna emocja)
+
+Przycisk: Start próby
+
+Przycisk: Pauza / Wznów
+
+Przycisk: Zakończ i zapisz
+
+Przejście do: Ekran zakończenia sesji
+
+4. Ekran zakończenia sesji
+Informacja: Sesja zapisana
+
+Przycisk: Wróć do ekranu głównego
+
+Przejście do: Ekran główny
+
+Przycisk: Odtwórz nagranie
+
+Przejście do: Ekran historii (z odtworzeniem)
+
+5. Ekran historii sesji
+Lista nagrań (tytuł, data)
+
+Przycisk: Odtwórz
+
+Odtwarza próbę
+
+Przycisk: Analiza
+
+Pokazuje różnice między scenariuszem a wypowiedzią
+
+
 Licencja
 Projekt jest przeznaczony wyłącznie do użytku prywatnego
 
