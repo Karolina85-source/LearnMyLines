@@ -4,522 +4,525 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 
 ## Główne funkcjonalności
 
-Importowanie scenariusza z pliku lub ręczne wpisanie tekstu Podział dialogu na kwestie aktora i partnerów Tryb nauki polegający na ukrywaniu części tekstu i odsłuchiwaniu nagrań Interaktywna symulacja dialogów z wirtualnym partnerem Historia sesji zapisująca postępy w nauce
+- Importowanie scenariusza z pliku lub ręczne wpisanie tekstu Podział dialogu na kwestie aktora i partnerów 
+- Tryb nauki polegający na ukrywaniu części tekstu i odsłuchiwaniu nagrań 
+- Interaktywna symulacja dialogów z wirtualnym partnerem Historia sesji zapisująca postępy w nauce
 
-### Technologie
+## Technologie
 
-Projekt wykorzystuje następujące technologie Python framework Django SQLite lub PostgreSQL jako baza danych HTML i CSS jako podstawowy frontend
+- Projekt wykorzystuje następujące technologie Python framework Django 
+- SQLite lub PostgreSQL jako baza danych 
+- HTML i CSS jako podstawowy frontend
 
-### Instalacja
+## Instalacja
 
-Aby uruchomić projekt lokalnie należy sklonować repozytorium i przejść do jego katalogu git clone https://github.com/twoje-repo/learnmylines.git cd learnmylines
+- Aby uruchomić projekt lokalnie należy sklonować repozytorium i przejść do jego katalogu git clone https://github.com/twoje-repo/learnmylines.git cd LearnMyLines
 
-Następnie należy zainstalować wymagane zależności pip install -r requirements.txt
+- Następnie należy zainstalować wymagane zależności pip install -r requirements.txt
 
-Uruchomienie aplikacji python manage.py runserver
+- Uruchomienie aplikacji python manage.py runserver
 
-Projekt można uruchomić w przeglądarce pod adresem http://127.0.0.1:8000/
+- Projekt można uruchomić w przeglądarce pod adresem http://127.0.0.1:8000/
 
-### Plan implementacji
+## Plan implementacji
 
-Utworzenie podstawowych modeli w Django Obsługa scenariuszy z możliwością importowania i edycji System nauki wykorzystujący tryb ukrywania i powtarzania tekstu Interaktywna symulacja dialogów Optymalizacja wyglądu i funkcjonalności aplikacji
+- Utworzenie podstawowych modeli w Django Obsługa scenariuszy z możliwością importowania i edycji 
+- System nauki wykorzystujący tryb ukrywania i powtarzania tekstu 
+- Interaktywna symulacja dialogów Optymalizacja wyglądu i funkcjonalności aplikacji
 
 ## Funkcjonalności aplikacji
  
-1. Importowanie scenariusza
-Użytkownik zaczyna od dodania swojego pliku (.txt, .pdf, .docx).
+- Importowanie scenariusza:
+- Użytkownik zaczyna od dodania swojego pliku (.txt, .pdf, .docx).
 
-Aplikacja automatycznie rozpoznaje role i dzieli tekst na wypowiedzi poszczególnych postaci.
+- Aplikacja automatycznie rozpoznaje role i dzieli tekst na wypowiedzi poszczególnych postaci
 
-Użytkownik może edytować role i tekst, jeśli coś zostało źle rozpoznane.
+- Użytkownik może edytować role i tekst, jeśli coś zostało źle rozpoznane
 
-Widok:
+### Widok:
  "Dodaj scenariusz" → Wybierz plik → Załaduj → Przypisz role → Zapisz.
 
-2. Tryb nauki scenariusza
-Twoje kwestie są wyświetlane.
+### Tryb nauki scenariusza
+- Twoje kwestie są wyświetlane
 
-Kwestie partnerów są odtwarzane (np. w różnych emocjach: radość, złość, smutek).
+- Kwestie partnerów są odtwarzane (np. w różnych emocjach: radość, złość, smutek)
 
-Możesz:
+### Możesz:
 
-Pauzować
+- Pauzować
 
-Przewijać
+- Przewijać
 
-Odtwarzać fragmenty wielokrotnie
+- Odtwarzać fragmenty wielokrotnie
 
-Wskaźnik postępu: np. "3/10 scen przećwiczonych".
+- Wskaźnik postępu: np. "3/10 scen przećwiczonych"
 
-Widok:
+### Widok:
  Start próby → Odtwarzanie partnerów → Mówisz swoją kwestię → Wskaźnik postępu.
 
-3. Analiza błędów
-Po zakończeniu próby aplikacja:
+### Analiza błędów
+- Po zakończeniu próby aplikacja:
 
-Porównuje Twój tekst z oryginalnym scenariuszem.
+- Porównuje Twój tekst z oryginalnym scenariuszem
 
-Pokazuje:
+### Pokazuje:
 
-Pominięte słowa
+- Pominięte słowa
 
-Zmiany w tekście
+- Zmiany w tekście
 
-Sugestie poprawy: np. "Uwaga na pomyłkę w 2. scenie".
+- Sugestie poprawy: np. "Uwaga na pomyłkę w 2. scenie"
 
-Widok:
- Podsumowanie po próbie → Lista błędów → Wskazówki.
+### Widok:
+- Podsumowanie po próbie → Lista błędów → Wskazówki
 
-4. Zadania emocjonalne
-Aplikacja proponuje:
+### Zadania emocjonalne
+- Aplikacja proponuje: "Powiedz tę kwestię jakbyś był bardzo zdenerwowany",
+"Spróbuj radośnie"
 
-"Powiedz tę kwestię jakbyś był bardzo zdenerwowany."
+- Możesz ćwiczyć tę samą scenę w różnych wariantach emocji
 
-"Spróbuj radośnie!"
+- Zapis różnych emocjonalnych wersji do porównania
 
-Możesz ćwiczyć tę samą scenę w różnych wariantach emocji.
+### Widok:
+ - Wybór emocji → Ćwiczenie → Zapis prób.
 
-Zapis różnych emocjonalnych wersji do porównania.
+### Historia sesji i zapis nagrań
+- Wszystkie Twoje nagrania są zapisane
 
-Widok:
- Wybór emocji → Ćwiczenie → Zapis prób.
+- Możesz:
 
-5. Historia sesji i zapis nagrań
-Wszystkie Twoje nagrania są zapisane.
+- Odsłuchiwać wcześniejsze próby
 
-Możesz:
+- Przeglądać historię błędów
 
-Odsłuchiwać wcześniejsze próby.
+- Obserwować postępy w nauce
 
-Przeglądać historię błędów.
+### Widok:
+-  Lista nagrań → Wybierz nagranie → Odtwórz/Analizuj
 
-Obserwować postępy w nauce.
+###b Tryb symulacji dialogu
+- Masz wirtualnego partnera, który:
 
-Widok:
- Lista nagrań → Wybierz nagranie → Odtwórz/Analizuj.
+- Mówi swoje kwestie w realistycznym tempie
 
-6. Tryb symulacji dialogu
-Masz wirtualnego partnera, który:
+- Reaguje na Twoje wypowiedzi
 
-Mówi swoje kwestie w realistycznym tempie.
+- Możesz ustawić:
 
-Reaguje na Twoje wypowiedzi.
+- Szybsze lub wolniejsze tempo rozmowy
 
-Możesz ustawić:
+### Widok:
+- Symulacja → Rozmowa z partnerem → Realistyczna scena
 
-Szybsze lub wolniejsze tempo rozmowy.
+## EKRANY APLIKACJI — SZYBKIE SZKICE I PRZEJŚCIA
 
-Widok:
- Symulacja → Rozmowa z partnerem → Realistyczna scena.
+### Ekran powitalny / startowy
+- Logo aplikacji + nazwa LearnMyLines
 
-EKRANY APLIKACJI — SZYBKIE SZKICE I PRZEJŚCIA
+- Duży przycisk „Dodaj scenariusz”
 
-1. Ekran powitalny / startowy
- Logo aplikacji + nazwa LearnMyLines
+- Link „Historia nagrań”
 
- Duży przycisk „Dodaj scenariusz”
+- Po kliknięciu:
 
- Link „Historia nagrań”
+ - „Dodaj scenariusz” → przejście do ekranu Import scenariusza
 
-Po kliknięciu:
+ - „Historia nagrań” → przejście do ekranu Historia sesji
 
- „Dodaj scenariusz” → przejście do ekranu Import scenariusza
+### Import scenariusza
+- Przycisk „Wybierz plik” (.txt / .pdf / .docx)
 
- „Historia nagrań” → przejście do ekranu Historia sesji
+- Podgląd treści
 
-2. Import scenariusza
- Przycisk „Wybierz plik” (.txt / .pdf / .docx)
+- Rozpoznane role
 
- Podgląd treści
+- Pola edycji ról
 
- Rozpoznane role
+- Przycisk „Zapisz i wybierz rolę”
 
- Pola edycji ról
+- Po kliknięciu:
 
- Przycisk „Zapisz i wybierz rolę”
+ - „Zapisz i wybierz rolę” → przejście do ekranu Wybór roli
 
-Po kliknięciu:
+### Wybór roli
+- Lista ról z nazwami
 
- „Zapisz i wybierz rolę” → przejście do ekranu Wybór roli
+- Podgląd tekstu dla każdej roli
 
-3. Wybór roli
- Lista ról z nazwami
+- Przycisk „Wybieram tę rolę”
 
- Podgląd tekstu dla każdej roli
+- Po kliknięciu:
 
- Przycisk „Wybieram tę rolę”
+ - „Wybieram tę rolę” → przejście do Ekranu ćwiczeń
 
-Po kliknięciu:
+### Ekran nauki (ćwiczenia)
+- Twoje kwestie (tekst do przeczytania)
 
- „Wybieram tę rolę” → przejście do Ekranu ćwiczeń
+- Odtwarzacz kwestii partnerów (z emocjami)
 
-4. Ekran nauki (ćwiczenia)
- Twoje kwestie (tekst do przeczytania)
+- Przycisk „Start próby”
 
- Odtwarzacz kwestii partnerów (z emocjami)
+ - Pauza / Przewiń / Powtórz
 
- Przycisk „Start próby”
+- Przycisk „Zakończ próbę”
 
- Pauza / Przewiń / Powtórz
+- Po kliknięciu:
 
- Przycisk „Zakończ próbę”
+ - „Zakończ próbę” → przejście do Ekranu analizy
 
-Po kliknięciu:
+### Ekran analizy błędów
+- Twoje nagranie vs oryginał
 
- „Zakończ próbę” → przejście do Ekranu analizy
+- Lista różnic / pomyłek
 
-5. Ekran analizy błędów
- Twoje nagranie vs oryginał
+- Sugestie poprawy
 
- Lista różnic / pomyłek
+- Przycisk „Spróbuj ponownie” / „Zapisz próbę”
 
- Sugestie poprawy
+- Po kliknięciu:
 
- Przycisk „Spróbuj ponownie” / „Zapisz próbę”
+ - „Spróbuj ponownie” → wraca do Ekranu nauki
 
-Po kliknięciu:
+ - „Zapisz próbę” → zapisuje i przechodzi do Historii
 
- „Spróbuj ponownie” → wraca do Ekranu nauki
+### Historia sesji
+- Lista zapisanych prób
 
-„Zapisz próbę” → zapisuje i przechodzi do Historii
+- Data, nazwa scenariusza
 
-6. Historia sesji
- Lista zapisanych prób
+- Przycisk „Odtwórz”
 
- Data, nazwa scenariusza
+-  Przycisk „Analiza błędów”
 
- Przycisk „Odtwórz”
+- Po kliknięciu:
 
- Przycisk „Analiza błędów”
+ - „Odtwórz” → Odtwarza nagranie
 
-Po kliknięciu:
+ - „Analiza” → Pokazuje ponownie błędy
 
-„Odtwórz” → Odtwarza nagranie
+### Przejścia między ekranami:
 
-„Analiza” → Pokazuje ponownie błędy
-
-Przejścia między ekranami:
-
- Start ➝ Import scenariusza ➝ Wybór roli ➝ Ćwiczenie ➝ Analiza ➝ Historia
+ - Start ➝ Import scenariusza ➝ Wybór roli ➝ Ćwiczenie ➝ Analiza ➝ Historia
 
 MUST HAVE (funkcje absolutnie niezbędne)
-Import scenariusza z pliku .txt
+- Import scenariusza z pliku .txt
 
-Automatyczne rozpoznanie i edycja ról
+- Automatyczne rozpoznanie i edycja ról
 
-Wybór roli przez użytkownika
+- Wybór roli przez użytkownika
 
-Tryb nauki – wyświetlanie kwestii użytkownika
+- Tryb nauki – wyświetlanie kwestii użytkownika
 
-Odtwarzanie kwestii partnerów (prosta wersja)
+- Odtwarzanie kwestii partnerów (prosta wersja)
 
-Przycisk „Start próby” i „Zakończ próbę”
+- Przycisk „Start próby” i „Zakończ próbę”
 
-Historia sesji – lista zapisanych prób
+- Historia sesji – lista zapisanych prób
 
-Możliwość odtworzenia własnych nagrań
+- Możliwość odtworzenia własnych nagrań
 
-Zapis prób
+- Zapis prób
 
 SHOULD HAVE (bardzo przydatne, ale niekonieczne)
-Obsługa plików .pdf i .docx
+- Obsługa plików .pdf i .docx
 
-Możliwość pauzowania i przewijania wypowiedzi
+- Możliwość pauzowania i przewijania wypowiedzi
 
-Prosta analiza błędów – porównanie tekstu użytkownika z oryginałem
+- Prosta analiza błędów – porównanie tekstu użytkownika z oryginałem
 
-Podgląd całej sceny / scenariusza
+- Podgląd całej sceny / scenariusza
 
-Edycja scenariusza przed zapisaniem
+- Edycja scenariusza przed zapisaniem
 
-Możliwość ustawienia tempa wypowiedzi partnerów
+- Możliwość ustawienia tempa wypowiedzi partnerów
 
 COULD HAVE (miło byłoby mieć)
-Zadania emocjonalne – różne wersje tej samej kwestii
+- Zadania emocjonalne – różne wersje tej samej kwestii
 
-Sugestie poprawy na podstawie analizy
+- Sugestie poprawy na podstawie analizy
 
-Porównanie nagrań w historii prób
+- Porównanie nagrań w historii prób
 
-Wskaźnik postępu nauki (np. liczba scen opanowanych)
+- Wskaźnik postępu nauki (np. liczba scen opanowanych)
 
-Tryb symulacji dialogu z wirtualnym partnerem
+- Tryb symulacji dialogu z wirtualnym partnerem
 
-Rozpoznawanie mowy lub sterowanie głosowe
+- Rozpoznawanie mowy lub sterowanie głosowe
 
 WON'T HAVE (na razie nie będzie)
-Rejestracja i logowanie użytkownika
+- Rejestracja i logowanie użytkownika
 
-Tryb multiplayer – granie sceny z inną osobą
+- Tryb multiplayer – granie sceny z inną osobą
 
-Tłumaczenie scenariuszy na inne języki
+- Tłumaczenie scenariuszy na inne języki
 
-Automatyczne generowanie scenariuszy
+- Automatyczne generowanie scenariuszy
 
-1. Ekran startowy (brak scenariuszy)
-Przycisk: Dodaj scenariusz
+### Ekran startowy (brak scenariuszy)
+- Przycisk: Dodaj scenariusz
 
-Przejście do: Ekran importu scenariusza
+- Przejście do: Ekran importu scenariusza
 
-Przycisk: Historia prób
+- Przycisk: Historia prób
 
-Przejście do: Ekran historii
+- Przejście do: Ekran historii
 
-2. Ekran importu scenariusza
-Wybór pliku (.txt / .pdf / .docx)
+### Ekran importu scenariusza
+- Wybór pliku (.txt / .pdf / .docx)
 
-Automatyczny podział na role
+- Automatyczny podział na role
 
-Podgląd scenariusza
+- Podgląd scenariusza
 
-Przypisanie roli użytkownika
+- Przypisanie roli użytkownika
 
-Przycisk: Zapisz i rozpocznij naukę
+- Przycisk: Zapisz i rozpocznij naukę
 
-Przejście do: Ekran nauki
+- Przejście do: Ekran nauki
 
-3. Ekran nauki
-Wyświetlenie kwestii użytkownika
+### Ekran nauki
+- Wyświetlenie kwestii użytkownika
 
-Odtwarzanie partnerów (domyślna emocja)
+- Odtwarzanie partnerów (domyślna emocja)
 
-Przycisk: Start próby
+- Przycisk: Start próby
 
-Przycisk: Pauza / Wznów
+- Przycisk: Pauza / Wznów
 
-Przycisk: Zakończ i zapisz
+- Przycisk: Zakończ i zapisz
 
-Przejście do: Ekran zakończenia sesji
+- Przejście do: Ekran zakończenia sesji
 
-4. Ekran zakończenia sesji
-Informacja: Sesja zapisana
+### Ekran zakończenia sesji
+- Informacja: Sesja zapisana
 
-Przycisk: Wróć do ekranu głównego
+- Przycisk: Wróć do ekranu głównego
 
-Przejście do: Ekran główny
+- Przejście do: Ekran główny
 
-Przycisk: Odtwórz nagranie
+- Przycisk: Odtwórz nagranie
 
-Przejście do: Ekran historii (z odtworzeniem)
+- Przejście do: Ekran historii (z odtworzeniem)
 
-5. Ekran historii sesji
-Lista nagrań (tytuł, data)
+### Ekran historii sesji
+- Lista nagrań (tytuł, data)
 
-Przycisk: Odtwórz
+- Przycisk: Odtwórz
 
-Odtwarza próbę
+- Odtwarza próbę
 
-Przycisk: Analiza
+- Przycisk: Analiza
 
-Pokazuje różnice między scenariuszem a wypowiedzią
+- Pokazuje różnice między scenariuszem a wypowiedzią
 
 
-Plan implementacji aplikacji LearnMyLines – szczegóły techniczne
-1. Modele / klasy w projekcie
-1.1. Model Scenario (Scenariusz)
-Pola:
+## Plan implementacji aplikacji LearnMyLines – szczegóły techniczne
+### Modele / klasy w projekcie
+- Model Scenario (Scenariusz)
+  - Pola:
 
-id (UUID lub AutoField)
+     - id (UUID lub AutoField)
 
-title (CharField) – nazwa scenariusza
+     - title (CharField) – nazwa scenariusza
 
-uploaded_file (FileField) – oryginalny plik scenariusza (.txt, .pdf, .docx)
+     - uploaded_file (FileField) – oryginalny plik scenariusza (.txt, .pdf, .docx)
 
-import_date (DateTimeField) – data dodania
+     - import_date (DateTimeField) – data dodania
 
-raw_text (TextField) – pełny tekst scenariusza po imporcie
+     - raw_text (TextField) – pełny tekst scenariusza po imporcie
 
-Metody:
+  - Metody:
 
-parse_roles() – metoda do automatycznego rozpoznawania ról i podziału na kwestie
+     - parse_roles() – metoda do automatycznego rozpoznawania ról i podziału na kwestie
 
-1.2. Model Role (Rola postaci)
-Pola:
+- Model Role (Rola postaci)
+  - Pola:
 
-id
+     - id
 
-scenario (ForeignKey do Scenario)
+     - scenario (ForeignKey do Scenario)
 
-name (CharField) – nazwa roli (np. „Hamlet”, „Ofelia”)
+     - name (CharField) – nazwa roli (np. „Hamlet”, „Ofelia”)
 
-is_user_role (BooleanField) – czy to rola wybrana przez użytkownika
+     - is_user_role (BooleanField) – czy to rola wybrana przez użytkownika
 
-1.3. Model Line (Kwestia)
-Pola:
+- Model Line (Kwestia)
+  - Pola:
 
-id
+     - id
 
-role (ForeignKey do Role)
+     - role (ForeignKey do Role)
 
-text (TextField) – tekst kwestii
+     - text (TextField) – tekst kwestii
 
-order (IntegerField) – kolejność w scenariuszu
+     - order (IntegerField) – kolejność w scenariuszu
 
-1.4. Model Session (Sesja nauki)
-Pola:
+- Model Session (Sesja nauki)
+  - Pola:
 
-id
+     - id
 
-scenario (ForeignKey do Scenario)
+     - scenario (ForeignKey do Scenario)
 
-user_role (ForeignKey do Role)
+     - user_role (ForeignKey do Role)
 
-start_time (DateTimeField)
+     - start_time (DateTimeField)
 
-end_time (DateTimeField)
+     - end_time (DateTimeField)
 
-progress (IntegerField) – liczba przećwiczonych kwestii/scen
+     - progress (IntegerField) – liczba przećwiczonych kwestii/scen
 
-1.5. Model Attempt (Próba wypowiedzi)
-Pola:
+- Model Attempt (Próba wypowiedzi)
+  - Pola:
 
-id
+     - id
 
-session (ForeignKey do Session)
+     - session (ForeignKey do Session)
 
-line (ForeignKey do Line) – kwestia ćwiczona w próbie
+     - line (ForeignKey do Line) – kwestia ćwiczona w próbie
 
-recording (FileField) – nagranie audio wypowiedzi użytkownika
+     - recording (FileField) – nagranie audio wypowiedzi użytkownika
 
-error_analysis (JSONField) – wynik analizy błędów (np. pominięcia, zmiany)
+     - error_analysis (JSONField) – wynik analizy błędów (np. pominięcia, zmiany)
 
-emotion (CharField) – emocja, z którą ćwiczono kwestię (np. „radość”, „złość”)
+     - emotion (CharField) – emocja, z którą ćwiczono kwestię (np. „radość”, „złość”)
 
-timestamp (DateTimeField)
+     - timestamp (DateTimeField)
 
-2. Baza danych – schemat i relacje
-Scenario 1 - * Role
+### Baza danych – schemat i relacje
+- Scenario 1 - * Role
 
-Role 1 - * Line
+- Role 1 - * Line
 
-Scenario 1 - * Session
+- Scenario 1 - * Session
 
-Session 1 - * Attempt
+- Session 1 - * Attempt
 
-Role (w Session) wskazuje rolę użytkownika
+ - Role (w Session) wskazuje rolę użytkownika
 
-Attempt powiązane z konkretną kwestią i sesją
+ - Attempt powiązane z konkretną kwestią i sesją
 
-3. Zewnętrzne biblioteki / API
-Przetwarzanie plików:
+### Zewnętrzne biblioteki / API
+- Przetwarzanie plików:
 
-python-docx – do odczytu plików .docx
+  - python-docx – do odczytu plików .docx
 
-PyPDF2 lub pdfplumber – do odczytu plików .pdf
+  - PyPDF2 lub pdfplumber – do odczytu plików .pdf
 
-Analiza tekstu i podział na role:
+- Analiza tekstu i podział na role:
 
-własne algorytmy oparte na regexach i heurystykach (np. rozpoznawanie wzorców „ROLA: tekst”)
+  - własne algorytmy oparte na regexach i heurystykach (np. rozpoznawanie wzorców „ROLA: tekst”)
 
-Nagrywanie i odtwarzanie audio:
+- Nagrywanie i odtwarzanie audio:
 
-HTML5 Web Audio API (frontend)
+  - HTML5 Web Audio API (frontend)
 
-pydub lub ffmpeg (backend) do konwersji i obróbki nagrań
+  - pydub lub ffmpeg (backend) do konwersji i obróbki nagrań
 
-Analiza błędów:
+- Analiza błędów:
 
-difflib (Python stdlib) do porównywania tekstów
+  - difflib (Python stdlib) do porównywania tekstów
 
-Frontend:
+- Frontend:
 
-JavaScript (np. React lub czysty JS) do interaktywnego odtwarzania i sterowania nagraniami
+  - JavaScript (np. React lub czysty JS) do interaktywnego odtwarzania i sterowania nagraniami
 
-Opcjonalnie:
+- Opcjonalnie:
 
-Text-to-Speech API (np. Google TTS) do generowania kwestii partnerów w różnych emocjach (future feature)
+  - Text-to-Speech API (np. Google TTS) do generowania kwestii partnerów w różnych emocjach (future feature)
 
-4. Interakcje użytkownika
-Dodawanie scenariusza:
+### Interakcje użytkownika
+- Dodawanie scenariusza:
 
-Użytkownik wybiera plik (.txt, .pdf, .docx)
+   - Użytkownik wybiera plik (.txt, .pdf, .docx)
 
-System importuje tekst, automatycznie rozpoznaje role i kwestie
+   - System importuje tekst, automatycznie rozpoznaje role i kwestie
 
-Użytkownik sprawdza i edytuje rozpoznane role i teksty
+   - Użytkownik sprawdza i edytuje rozpoznane role i teksty
 
-Zapisuje scenariusz i wybiera swoją rolę
+   - Zapisuje scenariusz i wybiera swoją rolę
 
-Tryb nauki:
+- Tryb nauki:
 
-Użytkownik widzi swoje kwestie wyświetlone na ekranie
+   - Użytkownik widzi swoje kwestie wyświetlone na ekranie
 
-Słyszy kwestie partnerów (odtwarzane audio z różnymi emocjami)
+   - Słyszy kwestie partnerów (odtwarzane audio z różnymi emocjami)
 
-Steruje odtwarzaniem (pauza, przewijanie, powtórki)
+   - Steruje odtwarzaniem (pauza, przewijanie, powtórki)
 
-Rozpoczyna i kończy próbę wypowiedzi
+   - Rozpoczyna i kończy próbę wypowiedzi
 
-Po próbie widzi analizę błędów i sugestie
+   - Po próbie widzi analizę błędów i sugestie
 
-Zadania emocjonalne:
+- Zadania emocjonalne:
 
-Wybór emocji do ćwiczenia kwestii
+   - Wybór emocji do ćwiczenia kwestii
 
-Nagrywanie i zapisywanie różnych wersji emocjonalnych
+   - Nagrywanie i zapisywanie różnych wersji emocjonalnych
 
-Historia sesji:
+- Historia sesji:
 
-Przeglądanie listy nagrań i sesji
+   - Przeglądanie listy nagrań i sesji
 
-Odtwarzanie nagrań i analiza błędów
+   - Odtwarzanie nagrań i analiza błędów
 
-Symulacja dialogu:
+- Symulacja dialogu:
 
-Rozmowa z wirtualnym partnerem, który odtwarza kwestie w realistycznym tempie
+   - Rozmowa z wirtualnym partnerem, który odtwarza kwestie w realistycznym tempie
 
-Możliwość zmiany tempa rozmowy
+   - Możliwość zmiany tempa rozmowy
 
-5. Rozrysowanie mockupów (opis słowny)
-5.1. Ekran startowy
-Logo + nazwa aplikacji
+### Rozrysowanie mockupów (opis słowny)
+- Ekran startowy
+   - Logo + nazwa aplikacji
 
-Duży przycisk „Dodaj scenariusz”
+   - Duży przycisk „Dodaj scenariusz”
 
-Link „Historia nagrań”
+   - Link „Historia nagrań”
 
-5.2. Import scenariusza
-Przycisk „Wybierz plik”
+- Import scenariusza
+   - Przycisk „Wybierz plik”
 
-Podgląd tekstu ze scenariuszem
+   - Podgląd tekstu ze scenariuszem
 
-Lista rozpoznanych ról z możliwością edycji
+   - Lista rozpoznanych ról z możliwością edycji
 
-Przycisk „Zapisz i wybierz rolę”
+   - Przycisk „Zapisz i wybierz rolę”
 
-5.3. Wybór roli
-Lista ról z nazwami
+- Wybór roli
+  - Lista ról z nazwami
 
-Podgląd kwestii dla każdej roli
+   - Podgląd kwestii dla każdej roli
 
-Przycisk „Wybieram tę rolę”
+   - Przycisk „Wybieram tę rolę”
 
-5.4. Ekran nauki
-Tekst własnych kwestii (wyświetlany)
+- Ekran nauki
+   - Tekst własnych kwestii (wyświetlany)
 
-Odtwarzacz kwestii partnerów (z kontrolkami: start, pauza, przewiń)
+   - Odtwarzacz kwestii partnerów (z kontrolkami: start, pauza, przewiń)
 
-Przycisk „Start próby” i „Zakończ próbę”
+   - Przycisk „Start próby” i „Zakończ próbę”
 
-Wskaźnik postępu
+   - Wskaźnik postępu
 
-5.5. Ekran analizy błędów
-Porównanie tekstu oryginalnego i wypowiedzi użytkownika
+- Ekran analizy błędów
+   - Porównanie tekstu oryginalnego i wypowiedzi użytkownika
 
-Lista błędów i sugestii
+   - Lista błędów i sugestii
 
-Przycisk „Spróbuj ponownie” i „Zapisz próbę”
+   - Przycisk „Spróbuj ponownie” i „Zapisz próbę”
 
-5.6. Historia sesji
-Lista nagrań z datami i nazwami scenariuszy
+- Historia sesji
+   - Lista nagrań z datami i nazwami scenariuszy
 
-Przycisk „Odtwórz” i „Analiza”
+   - Przycisk „Odtwórz” i „Analiza”
 
-5.7. Tryb symulacji dialogu
-Okno rozmowy z wirtualnym partnerem
+- Tryb symulacji dialogu
+   - Okno rozmowy z wirtualnym partnerem
 
-Kontrolki zmiany tempa
+   - Kontrolki zmiany tempa
 
-Przycisk zakończenia symulacji
+   - Przycisk zakończenia symulacji
 
  
