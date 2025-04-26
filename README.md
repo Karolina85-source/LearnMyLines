@@ -4,7 +4,8 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 
 ## Główne funkcjonalności
 
-- Importowanie scenariusza z pliku lub ręczne wpisanie tekstu Podział dialogu na kwestie aktora i partnerów 
+- Importowanie scenariusza z pliku lub ręczne wpisanie tekstu 
+- Podział dialogu na kwestie aktora i partnerów 
 - Tryb nauki polegający na ukrywaniu części tekstu i odsłuchiwaniu nagrań 
 - Interaktywna symulacja dialogów z wirtualnym partnerem 
 - Historia sesji zapisująca postępy w nauce
