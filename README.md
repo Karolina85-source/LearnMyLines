@@ -35,11 +35,11 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 ## Funkcjonalności aplikacji
  
 - Importowanie scenariusza:
-- Użytkownik zaczyna od dodania swojego pliku (.txt, .pdf, .docx).
+  - Użytkownik zaczyna od dodania swojego pliku (.txt, .pdf, .docx).
 
-- Aplikacja automatycznie rozpoznaje role i dzieli tekst na wypowiedzi poszczególnych postaci
+  - Aplikacja automatycznie rozpoznaje role i dzieli tekst na wypowiedzi poszczególnych postaci
 
-- Użytkownik może edytować role i tekst, jeśli coś zostało źle rozpoznane
+  - Użytkownik może edytować role i tekst, jeśli coś zostało źle rozpoznane
 
 ### Widok:
  "Dodaj scenariusz" → Wybierz plik → Załaduj → Przypisz role → Zapisz.
@@ -207,7 +207,8 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 
  - Start ➝ Import scenariusza ➝ Wybór roli ➝ Ćwiczenie ➝ Analiza ➝ Historia
 
-MUST HAVE (funkcje absolutnie niezbędne)
+
+### MUST HAVE (funkcje absolutnie niezbędne)
 - Import scenariusza z pliku .txt
 
 - Automatyczne rozpoznanie i edycja ról
@@ -226,7 +227,7 @@ MUST HAVE (funkcje absolutnie niezbędne)
 
 - Zapis prób
 
-SHOULD HAVE (bardzo przydatne, ale niekonieczne)
+### SHOULD HAVE (bardzo przydatne, ale niekonieczne)
 - Obsługa plików .pdf i .docx
 
 - Możliwość pauzowania i przewijania wypowiedzi
@@ -239,7 +240,7 @@ SHOULD HAVE (bardzo przydatne, ale niekonieczne)
 
 - Możliwość ustawienia tempa wypowiedzi partnerów
 
-COULD HAVE (miło byłoby mieć)
+### COULD HAVE (miło byłoby mieć)
 - Zadania emocjonalne – różne wersje tej samej kwestii
 
 - Sugestie poprawy na podstawie analizy
@@ -252,7 +253,7 @@ COULD HAVE (miło byłoby mieć)
 
 - Rozpoznawanie mowy lub sterowanie głosowe
 
-WON'T HAVE (na razie nie będzie)
+### WON'T HAVE (na razie nie będzie)
 - Rejestracja i logowanie użytkownika
 
 - Tryb multiplayer – granie sceny z inną osobą
