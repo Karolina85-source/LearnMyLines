@@ -522,11 +522,4 @@ Kontrolki zmiany tempa
 
 Przycisk zakończenia symulacji
 
-
-Licencja
-Projekt jest przeznaczony wyłącznie do użytku prywatnego
-
-Kontakt
-
-W przypadku pytań proszę o kontakt na e-mail karolinaficht@wp.pl
  
