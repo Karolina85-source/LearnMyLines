@@ -11,7 +11,7 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 
 ## Technologie
 
-- Projekt wykorzystuje następujące technologie Python framework Django 
+- Python framework Django 
 - SQLite lub PostgreSQL jako baza danych 
 - HTML i CSS jako podstawowy frontend
 
@@ -29,7 +29,8 @@ LearnMyLines to aplikacja wspierająca aktorów w nauce scenariusza na pamięć.
 
 - Utworzenie podstawowych modeli w Django Obsługa scenariuszy z możliwością importowania i edycji 
 - System nauki wykorzystujący tryb ukrywania i powtarzania tekstu 
-- Interaktywna symulacja dialogów Optymalizacja wyglądu i funkcjonalności aplikacji
+- Interaktywna symulacja dialogów 
+- Optymalizacja wyglądu i funkcjonalności aplikacji
 
 ## Funkcjonalności aplikacji
  
